@@ -90,9 +90,9 @@ function checkRoundWinner(playerPick, computerPick) {
 		if (playerPick === computerPick) { 
 			winnerIs = 'noone'; // remis 
 		} else if ( 
-			(computerPick === 'rock' && playerPick == 'scissors') || 
-			(computerPick === 'scissors' && playerPick == 'paper') || 
-			(computerPick === 'paper' && playerPick == 'rock')) { 
+			(computerPick === 'rock' && playerPick === 'scissors') || 
+			(computerPick === 'scissors' && playerPick === 'paper') || 
+			(computerPick === 'paper' && playerPick === 'rock')) { 
 				
 			winnerIs = 'computer'; 
 		} 
@@ -110,7 +110,7 @@ function checkRoundWinner(playerPick, computerPick) {
 function playerPick(playerPick) { 
 	var computerPick = getComputerPick(); 
 	playerPickElem.innerHTML = playerPick; 
-	computerPickElem.innerHTML = computerPick; 
+	computerPickElem.innerHTML = computerPick;
 	checkRoundWinner(playerPick, computerPick); 
 }
 
